@@ -2,7 +2,7 @@ import * as React from "react";
 import { View, StyleSheet, Dimensions, ScrollView, Text,FlatList } from "react-native";
 import styles from "./style";
 import { Col, Row, Grid } from "react-native-easy-grid";
-import { Headline, Avatar } from "react-native-paper";
+import { Headline,Caption, Avatar,Button } from "react-native-paper";
 
 export const TabOne = props => {
   return (
@@ -21,10 +21,17 @@ export const TabOne = props => {
                   key={index}
                   >
                 <Col style={styles.projectImgOuter}>  
-                 <Avatar.Image
-                        size={35}
-                        source={{ uri: ticketData.image }}
-                      />          
+                  <Avatar.Image
+                    size={35}
+                    source={{ uri: ticketData.image }}
+                  /> 
+                  <Button mode="contained" style={styles.continuebtn}>
+                    <Caption style={styles.continuebtntext}>
+                      <Text style={styles.instructions}>
+                        {'Show Details'}
+                      </Text>
+                    </Caption>
+                  </Button>         
                 </Col>
                 <Col style={styles.projectDetailSection}>
                   <Row style={styles.projectDetailOuter} size={2}>
